@@ -1,1 +1,1 @@
-# -Interactive-PDF-Chat-Agent
+# Interactive-PDF-Chat-Agent
