@@ -8,9 +8,10 @@ import { PromptTemplate } from "langchain/prompts";
 import { PDFLoader } from "langchain/document_loaders/fs/pdf";
 
 // NOTE: change this default filePath to any of your default file name
-const chat = async (query, filePath="./uploads/May_Resume.pdf") => {
+const chat = async (query, filePath="./uploads/sample.pdf") => {
 
     // step 1: document loading
+    console.log(`Loading file from: ${filePath}`);
     const loader = new PDFLoader(filePath);
 
     const data = await loader.load();
@@ -38,7 +39,7 @@ const chat = async (query, filePath="./uploads/May_Resume.pdf") => {
 
     // step 5: question & answer
     const model = new ChatOpenAI({
-        modelName: "gpt-4o-mini-2024-07-18",
+        modelName: "o4-mini-2025-04-16",
         openAIApiKey: process.env.REACT_APP_OPENAI_API_KEY,
     })
 
@@ -53,7 +54,8 @@ const chat = async (query, filePath="./uploads/May_Resume.pdf") => {
     
     // Retrival
     const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(), {
-        prompt: PromptTemplate.fromTemplate(template)
+        prompt: PromptTemplate.fromTemplate(template),
+        // returnSourceDocuments: true,
     });
 
     const response = await chain.call({
@@ -61,6 +63,6 @@ const chat = async (query, filePath="./uploads/May_Resume.pdf") => {
     });
 
     return response;
-}
+};
 
 export default chat;
