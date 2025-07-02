@@ -1,5 +1,8 @@
 
 # Interactive-PDF-Chat-Agent
+![System Diagram](readme/System_diagram.png)
+![UI](readme/UI.png)
+
 
 ## Getting Started with Create React App
 
@@ -8,6 +11,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run dev` (Recommend!)
+Kick off frontend an backend server concurrently.
 
 ### `npm start`
 
@@ -71,4 +77,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> master
+
