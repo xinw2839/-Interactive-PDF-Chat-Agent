@@ -8,7 +8,7 @@ import { PromptTemplate } from "langchain/prompts";
 import { PDFLoader } from "langchain/document_loaders/fs/pdf";
 
 // NOTE: change this default filePath to any of your default file name
-const chat = async (query, filePath="./uploads/sample.pdf") => {
+const chat = async (query, filePath="./uploads/May_Resume.pdf") => {
 
     // step 1: document loading
     console.log(`Loading file from: ${filePath}`);

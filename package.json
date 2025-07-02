@@ -12,6 +12,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-speech-recognition": "^3.10.0",
+    "speak-tts": "^2.0.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -23,12 +25,12 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-  "extends": [
-    "react-app",
-    "react-app/jest"
-  ]
-},
-"browserslist": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
